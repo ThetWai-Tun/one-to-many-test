@@ -18,6 +18,7 @@ public class Product {
     private double price;
 
     @ManyToOne
+    @JoinColumn(name = "category_products")
     private Category category;
 
     public Product(String name, int quantity, double price){

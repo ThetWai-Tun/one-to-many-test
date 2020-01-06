@@ -28,21 +28,28 @@ public class IDatabaseImpl implements IDatabase {
         c2.setName("Meats");
 
         Product p1 = new Product("Apple", 23, 2000);
-        Product p2 = new Product("Apple", 23, 2000);
-        Product p3 = new Product("Apple", 23, 2000);
-        Product p4 = new Product("Apple", 23, 2000);
+        Product p2 = new Product("Orange", 20, 3000);
+        Product p3 = new Product("Mango", 21, 1000);
+        Product p4 = new Product("Banana", 22, 3000);
+
+        c1.addProduct(p1);
+        c1.addProduct(p2);
 
         p1.setCategory(c1);
         p2.setCategory(c1);
+
+        c2.addProduct(p3);
+        c2.addProduct(p4);
+
         p3.setCategory(c2);
         p4.setCategory(c2);
 
         categoryRepository.save(c1);
         categoryRepository.save(c2);
 
-        productRepository.save(p1);
-        productRepository.save(p2);
-        productRepository.save(p3);
-        productRepository.save(p4);
+//        productRepository.save(p1);
+//        productRepository.save(p2);
+//        productRepository.save(p3);
+//        productRepository.save(p4);
     }
 }

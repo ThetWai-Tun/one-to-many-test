@@ -18,7 +18,6 @@ public class Category {
     private String name;
 
     @OneToMany(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "category_id_fk")
     private List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product){
